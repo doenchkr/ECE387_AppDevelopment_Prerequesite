@@ -1,0 +1,60 @@
+package com.example.myfirstproject;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    public void countUp (View view) {
+        // Get the text view.
+        TextView showCountTextView = (TextView)
+                findViewById(R.id.textView2);
+
+        // Get the value of the text view.
+        String countString = showCountTextView.getText().toString();
+
+        // Convert value to a number and increment it.
+        Integer count = Integer.parseInt(countString);
+        count++;
+
+        // Display the new value in the text view.
+        showCountTextView.setText(count.toString());
+    }
+    public void countDown (View view) {
+        // Get the text view.
+        TextView showCountTextView = (TextView)
+                findViewById(R.id.textView2);
+
+        // Get the value of the text view.
+        String countString = showCountTextView.getText().toString();
+
+        // Convert value to a number and increment it.
+        Integer count = Integer.parseInt(countString);
+        count--;
+
+        // Display the new value in the text view.
+        showCountTextView.setText(count.toString());
+    }
+
+    public void resetMe (View view) {
+        // Get the text view.
+        TextView showCountTextView = (TextView)
+                findViewById(R.id.textView2);
+
+        // Get the value of the text view.
+        String countString = showCountTextView.getText().toString();
+
+        // Convert value to a number and increment it.
+        Integer count = 0;
+
+        // Display the new value in the text view.
+        showCountTextView.setText(count.toString());
+    }
+}
